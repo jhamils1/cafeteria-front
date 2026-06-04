@@ -1,0 +1,382 @@
+/* Colores café/marrón del sistema */
+:root {
+  --cafe-principal: #8b6f47;
+  --cafe-oscuro: #6d5a3d;
+  --cafe-claro: #a08968;
+  --beige: #f5ede3;
+  --beige-claro: #fef5f0;
+  --marron-suave: #d4a574;
+  --marron-oscuro: #9d7e6f;
+}
+
+.reporte-container {
+  padding: 20px;
+  background: linear-gradient(135deg, #fef5f0 0%, #f5ede3 100%);
+  min-height: 100vh;
+}
+
+.reporte-header {
+  margin-bottom: 30px;
+}
+
+.reporte-header h1 {
+  color: var(--cafe-oscuro);
+  font-size: 28px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.reporte-header p {
+  color: var(--cafe-principal);
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Filtros */
+.filtros-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(139, 111, 71, 0.1);
+  border: 1px solid var(--beige);
+}
+
+.filtros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtro-item label {
+  font-weight: 600;
+  color: var(--cafe-principal);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input-date {
+  padding: 10px 12px;
+  border: 2px solid var(--beige);
+  border-radius: 6px;
+  font-size: 13px;
+  background: white;
+  color: var(--cafe-principal);
+  transition: all 0.3s ease;
+}
+
+.input-date:focus {
+  outline: none;
+  border-color: var(--cafe-principal);
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+}
+
+.filtro-acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--cafe-principal);
+  color: white;
+  flex-shrink: 0;
+}
+
+.btn-primary:hover {
+  background: var(--cafe-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 111, 71, 0.2);
+}
+
+.btn-secondary {
+  background: var(--beige);
+  color: var(--cafe-principal);
+  flex-shrink: 0;
+}
+
+.btn-secondary:hover {
+  background: var(--marron-suave);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Tarjetas de Resumen */
+.tarjetas-resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(139, 111, 71, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(139, 111, 71, 0.15);
+}
+
+.card-total {
+  border-top: 4px solid #2ecc71;
+}
+
+.card-notas {
+  border-top: 4px solid #3498db;
+}
+
+.card-producto {
+  border-top: 4px solid #f39c12;
+}
+
+.tarjeta-icono {
+  font-size: 40px;
+  line-height: 1;
+  min-width: 50px;
+  text-align: center;
+}
+
+.tarjeta-contenido {
+  flex: 1;
+}
+
+.tarjeta-contenido h3 {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: var(--cafe-principal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tarjeta-valor {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cafe-oscuro);
+}
+
+.tarjeta-subtexto {
+  margin: 0;
+  font-size: 12px;
+  color: var(--cafe-principal);
+  opacity: 0.7;
+}
+
+/* Secciones */
+.grafica-section,
+.tabla-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(139, 111, 71, 0.1);
+  border: 1px solid var(--beige);
+}
+
+.section-header {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--beige);
+  padding-bottom: 15px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--cafe-oscuro);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sin-datos {
+  text-align: center;
+  color: var(--cafe-principal);
+  padding: 40px 20px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Tabla */
+.tabla-wrapper {
+  overflow-x: auto;
+}
+
+.tabla-reporte {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tabla-reporte thead {
+  background: linear-gradient(to right, var(--beige), var(--beige-claro));
+  border-bottom: 3px solid var(--cafe-principal);
+}
+
+.tabla-reporte th {
+  padding: 12px;
+  text-align: left;
+  color: var(--cafe-oscuro);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+.tabla-reporte tbody tr {
+  border-bottom: 1px solid var(--beige);
+  transition: background-color 0.2s ease;
+}
+
+.tabla-reporte tbody tr:hover {
+  background-color: var(--beige-claro);
+}
+
+.tabla-reporte tbody tr.par {
+  background-color: rgba(245, 237, 227, 0.3);
+}
+
+.tabla-reporte td {
+  padding: 12px;
+  color: var(--cafe-principal);
+}
+
+.tabla-reporte td.numero {
+  font-weight: 600;
+  color: var(--cafe-oscuro);
+  width: 40px;
+  text-align: center;
+}
+
+.tabla-reporte td.nombre {
+  font-weight: 500;
+  color: var(--cafe-oscuro);
+}
+
+.tabla-reporte td.monto {
+  font-weight: 700;
+  color: #2ecc71;
+}
+
+.tabla-reporte td.cantidad,
+.tabla-reporte td.promedio {
+  text-align: center;
+  color: var(--cafe-principal);
+}
+
+/* Estados de carga */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--cafe-principal);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtro-acciones {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tarjetas-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla-reporte {
+    font-size: 12px;
+  }
+
+  .tabla-reporte th,
+  .tabla-reporte td {
+    padding: 8px;
+  }
+
+  .reporte-header h1 {
+    font-size: 22px;
+  }
+
+  .section-header h2 {
+    font-size: 16px;
+  }
+
+  .tarjeta-valor {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reporte-container {
+    padding: 10px;
+  }
+
+  .grafica-section,
+  .tabla-section,
+  .filtros-section {
+    padding: 15px;
+  }
+
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .tarjeta-icono {
+    font-size: 32px;
+  }
+
+  .tarjeta-contenido h3 {
+    font-size: 12px;
+  }
+
+  .tarjeta-valor {
+    font-size: 18px;
+  }
+
+  .tabla-reporte th,
+  .tabla-reporte td {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .tabla-reporte td.numero {
+    width: 35px;
+  }
+}
